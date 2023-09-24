@@ -38,19 +38,19 @@ class MainActivity : AppCompatActivity() {
                 pickDate.year, pickDate.month, pickDate.dayOfMonth
             ) { _, year, monthOfYear, dayOfMonth ->
                 selectedDate = "$dayOfMonth/${monthOfYear + 1}/$year"
-                Toast.makeText(this@MainActivity, selectedDate, Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this@MainActivity, selectedDate, Toast.LENGTH_SHORT).show()
             }
 
             pickTime.setOnTimeChangedListener { view, hourOfDay, minute ->
                 selectedTime = String.format("%02d:%02d", hourOfDay, minute)
-                Toast.makeText(this@MainActivity, selectedTime, Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this@MainActivity, selectedTime, Toast.LENGTH_SHORT).show()
             }
 
             btnPesan.setOnClickListener() {
                 selectedBrand = spinBrand.selectedItem.toString()
                 Toast.makeText(
                     this@MainActivity,
-                    "Tiket Bus $selectedBrand, pada $selectedDate, pukul $selectedTime berhasil dipesan",
+                    "Pemesanan tiket bus $selectedBrand, tanggal $selectedDate, jam $selectedTime berhasil dilakukan.",
                     Toast.LENGTH_LONG
                 ).show()
             }
